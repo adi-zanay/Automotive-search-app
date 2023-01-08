@@ -1,0 +1,231 @@
+<ion-menu contentId="main-content">
+    <ion-header>
+        <ion-toolbar color="danger">
+            <ion-img src="https://stimg2.cardekho.com/images/carNewsEditorImages/930x620/20190221_125759/23253/oem-name0.jpg"></ion-img>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-accordion-group expand="inset">
+            <ion-accordion value="first">
+                <ion-item slot="header" color="medium">
+                    <ion-label>New Cars</ion-label>
+                </ion-item>
+                <div slot="content">
+                    <ion-list>
+                        <ion-item routerLink="./newcars">
+                            <ion-label>Search New Cars</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-select interface="popover" placeholder="Popular Brands">
+                                <ion-select-option value="Citroen">Citroen Cars</ion-select-option>
+                                <ion-select-option value="Hyundai">Hyundai Cars</ion-select-option>
+                                <ion-select-option value="Mahindra">Mahindra Cars</ion-select-option>
+                                <ion-select-option value="Kia">Kia Cars</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Latest Cars</ion-label><br>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Electric Cars</ion-label>
+                            <ion-badge color="danger">New</ion-badge><br></ion-item>
+                        <ion-item>
+                            <ion-label>Electric Changing Stations</ion-label>
+                            <ion-badge color="danger">New</ion-badge><br></ion-item>
+                        <ion-item>
+                            <ion-label>Suggest me a Car</ion-label>
+                            <ion-badge color="danger">New</ion-badge><br></ion-item>
+                        <ion-item>
+                            <ion-label>BS6 Cars</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </div>
+            </ion-accordion>
+            <ion-accordion value="second">
+                <ion-item slot="header" color="medium">
+                    <ion-label>Used Cars</ion-label>
+                </ion-item>
+                <div class="ion-padding" slot="content">
+                    <ion-list>
+                        <ion-item>
+                            <ion-select interface="popover" placeholder="Cars in your city">
+                                <ion-select-option value="bangalore">Bangalore</ion-select-option>
+                                <ion-select-option value="Chennai">Chennai</ion-select-option>
+                                <ion-select-option value="Mumbai">Mumbai</ion-select-option>
+                                <ion-select-option value="Jaipur">Jaipur</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>CarDekho Used Cars</ion-label><br>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Sell Used Cars</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Used Car Dealers</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </div>
+            </ion-accordion>
+            <ion-accordion value="news">
+                <ion-item slot="header" color="medium">
+                    <ion-label>News & Reviews</ion-label>
+                </ion-item>
+                <div class="ion-padding" slot="content">
+                    <ion-list>
+                        <ion-item>
+                            <ion-label>Car News</ion-label><br>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Feature Stories</ion-label>
+                            <ion-badge color="danger">New</ion-badge><br></ion-item>
+                        <ion-item>
+                            <ion-label>Car Collections</ion-label>
+                            <ion-badge color="danger">New</ion-badge><br></ion-item>
+                        <ion-item>
+                            <ion-label>Road Test</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Car Selling Tips</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </div>
+            </ion-accordion>
+        </ion-accordion-group>
+    </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+    <ion-header>
+        <ion-toolbar color="dark">
+            <ion-buttons slot="start">
+                <ion-menu-button color="danger" class="display-1"></ion-menu-button>
+            </ion-buttons>
+            <ion-buttons>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="8">
+                            <ion-searchbar animated="true" placeholder="Search Cars "></ion-searchbar>
+                        </ion-col>
+                        <ion-col size="4">
+                            <ion-list>
+                                <ion-item>
+                                    <ion-select interface="popover" placeholder="English">
+                                        <ion-select-option value=" English ">English</ion-select-option>
+                                        <ion-select-option value="Hindi ">Hindi</ion-select-option>
+                                        <ion-select-option value="Kannada ">Kannada</ion-select-option>
+                                        <ion-select-option value="Tamil ">Tamil</ion-select-option>
+                                    </ion-select>
+                                </ion-item>
+                            </ion-list>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-img src="https://images.yourstory.com/cs/wordpress/2014/08/CarDekho_FeaturedImage_YS.png?w=752&fm=auto&ar=2:1&mode=crop&crop=faces"></ion-img>
+        <ion-button expand="full">
+            <ion-icon name="home" slot="start"></ion-icon> HOME</ion-button>
+        <ion-button expand="full" routerLink="./contact">
+            <ion-icon name="call" slot="start"></ion-icon>
+            CONTACT US </ion-button>
+        <ion-button expand="full" routerLink="./about">
+            <ion-icon name="people" slot="start"></ion-icon>
+            ABOUT US </ion-button>
+        <ion-card class="alert alert-dark">
+            <ion-button color="danger" expand="block" routerLink="./login">
+                <ion-icon name="person-circle" slot="start"></ion-icon>Login
+            </ion-button>
+            <ion-button color="danger" expand="block" routerLink="./signup">
+                <ion-icon name="log-in" slot="start"></ion-icon>Sign Up
+            </ion-button>
+        </ion-card>
+        <br>
+        <ion-card class=" alert alert-danger">
+            <ion-card-header>
+                <h2><b>The most searched cars</b></h2>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Swift/8378/1644834798148/front-left-side-47.jpg?tr=w-456 "></ion-img>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b class="h4">Maruti Swift</b>
+                        <br><b class="h5">₹ 5.92 - 8.85 Lacks*</b><br><br>
+                        <ion-button expand="block" color="danger">Check Offer</ion-button>
+                    </ion-card-content>
+                </ion-card>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-img src="https://m.economictimes.com/thumb/height-450,width-600,imgsize-29912,msid-85860680/hyundai-unveils-i20-under-n-line-aims-to-bring-in-more-models-in-next-few-years.jpg "></ion-img>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b class="h4 ">Hyundai i20</b>
+                        <br><b class="h5">₹ 7.07 - 11.62 Lakh*</b><br><br>
+                        <ion-button expand="block" color="danger">Check Offer</ion-button>
+                    </ion-card-content>
+                </ion-card>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-img src="https://economictimes.indiatimes.com/thumb/msid-86834106,width-1200,height-900,resizemode-4,imgsize-49986/xuv-700_mahndra.jpg?from=mdr "></ion-img>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b class="h4">Mahindra XUV700</b>
+                        <br><b class="h5">₹ 13.45 - 24.95 Lakh*</b><br><br>
+                        <ion-button expand="block" color="danger">Check Offer</ion-button>
+                    </ion-card-content>
+                </ion-card>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Mahindra_Thar_Photoshoot_At_Perupalem_Beach_%28West_Godavari_District%2CAP%2CIndia_%29_Djdavid.jpg/1200px-Mahindra_Thar_Photoshoot_At_Perupalem_Beach_%28West_Godavari_District%2CAP%2CIndia_%29_Djdavid.jpg "></ion-img>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b class="h4">Mahindra Thar</b>
+                        <br><b class="h5">₹ 13.59 - 16.29 Lakh*</b><br><br>
+                        <ion-button expand="block" color="danger">Check Offer</ion-button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-card-content>
+        </ion-card>
+        <ion-card class="alert alert-dark">
+            <ion-card-header>
+                <h2><b>Latest Cars</b></h2>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-img src="https://images.thequint.com/thequint%2F2022-10%2F6b00ebd6-81d7-48ce-acba-07b553aa5df7%2Fcomposit.jpg?auto=format%2Ccompress&fmt=webp&width=720 "></ion-img>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b class="h4 ">BYD Atto 3</b>
+                        <br><b class="h5 ">₹ 33.99 Lakh*</b><br><br>
+                        <ion-button expand="block " color="danger ">Check Offer</ion-button>
+                    </ion-card-content>
+                </ion-card>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Glanza/8903/1647336836077/front-left-side-47.jpg "></ion-img>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b class="h4 ">Toyota Glanza</b>
+                        <br><b class="h5 ">₹ 6.59 - 9.99 Lakh*</b><br><br>
+                        <ion-button expand="block " color="danger ">Check Offer</ion-button>
+                    </ion-card-content>
+                </ion-card>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-img src="https://imgd-ct.aeplcdn.com/664x415/cw/ec/26521/Audi-Q5-Exterior-165497.jpg?wm=0&q=75 "></ion-img>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b class="h4 ">Audi Q5 </b>
+                        <br><b class="h5 ">₹ 60.50 - 67.05 Lakh*</b><br><br>
+                        <ion-button expand="block " color="danger ">Check Offer</ion-button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
+</div>
